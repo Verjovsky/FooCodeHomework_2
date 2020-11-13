@@ -1,0 +1,228 @@
+
+html {
+    font-size: 16px;
+    background-color: rgb(254, 254, 254);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    box-sizing: border-box;
+    margin-left: 50px;
+    width: 91.4%;
+    height: 150px;
+    color: rgb(254, 254, 254);
+    font-size: 5rem;
+    padding-top:10px;
+    padding-left: 60px;
+    background-image: url("https://dasartes.com.br/dasartes.com.br/wp-content/uploads/2020/10/mondrian-painting.jpg");
+    border: solid black;
+}
+
+h2 {
+    box-sizing: border-box;
+    background-image: url("https://dasartes.com.br/dasartes.com.br/wp-content/uploads/2020/10/mondrian-painting.jpg");
+    background-position: right;
+    color: rgb(60, 70, 129);
+    color: rgb(212, 38, 39);
+  /*  text-shadow: 2px 2px rgb(252, 210, 2); */
+    letter-spacing: 2%;
+    word-spacing: 10%;
+    margin-left: 50px;
+    width: 91.4%;
+    height: 80px;
+    font-size: 2rem;
+    border: solid black;
+    padding-left: 10%;
+    padding-top: 20px;
+}
+/* GRID FLOATS general */
+
+
+#grid-floats img {
+    box-sizing: border-box;
+    float: right;
+    width: 100%;
+    vertical-align: middle;
+    background-color: rgb(254, 254, 254);
+}
+#grid-floats p {
+    box-sizing: border-box;
+    float: right;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: left;
+}
+#grid-floats h3 {
+    box-sizing: border-box;
+    float: right;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    color: rgb(60, 70, 129);
+}
+#grid-floats li {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: justify;
+    vertical-align: top;
+    overflow: auto;
+    clear: both;
+    width: 22.3%;
+    height: 500px;
+    padding: 20px;
+    margin: 10px;
+    border: dotted rgb(60, 70, 129);
+    background-color: white;
+
+    
+} 
+
+/* GRID FLEX general */
+
+
+#grid-flex li {
+    display: inline-flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex: 2;
+    flex-wrap: wrap;
+    width: 22%;
+    min-height: 500px;
+    border: dotted  rgb(212, 38, 39);
+    background-color: white;
+    margin: 10px;
+    padding: 2%;
+    
+}
+#grid-flex h3 {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 2;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    margin: 10px;
+    color: rgb(60, 70, 129);
+}
+
+#grid-flex p {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 2;
+    width: 100%;
+    margin: 10px;
+}
+
+#grid-flex img {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 2;
+    width: 90%;
+    margin: 10px;
+}
+
+/* For phones: 
+a two column grid, with the exception that 
+the first item spans the full width */
+
+@media all and (max-width: 599px) {
+    #grid-floats li {
+    width: 44%;
+    }
+    #grid-floats li:nth-child(1) {
+    width: 94%;
+    min-height: 610px;
+    }
+}   
+@media all and (max-width: 599px) {
+    #grid-flex li {
+    display: inline-flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex: 2;
+    flex-wrap: wrap;
+    width: 38.7%;    
+    }
+    #grid-flex li:nth-child(1) {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    flex: 2;
+    flex-wrap: wrap;
+    width: 88.6%;
+    margin: 10px;
+    }
+}
+  
+  /* For tablets: 
+  a three column grid, with the exception that 
+  the first two items span the full width together 
+  (so first we have two columns, then 
+  after the first two items we have three columns) */
+
+@media all and (min-width: 600px) and (max-width: 1024px) {
+    #grid-floats li {
+    width: 28.7%;
+    }
+    #grid-floats li:nth-child(-n+2) {
+    width: 45.3%;
+    min-height: 610px;
+    }
+} 
+
+@media all and (min-width: 600px) and (max-width: 1024px) {
+    #grid-flex li {
+        display: inline-flex;
+        justify-content: space-around;
+        align-content: flex-start;
+        flex: 2;
+        flex-wrap: wrap;
+        width: 24.2%;    
+        }
+   #grid-flex li:nth-child(-n+2) {
+    display: inline-flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex: 2;
+    flex-wrap: wrap;
+    width: 40%;
+    margin: 10px;
+    }
+}
+
+
+  /* For desktop: 
+ a four column grid, 
+ with the exception that the first item spans two columns. */
+ 
+ @media all and (min-width:1025px) {
+    #grid-floats li {
+    width: 22.3%;
+    }
+    #grid-floats li:nth-child(1) {
+    width: 46.7%;
+    min-height: 610px;
+    }
+}
+@media all and (min-width:1025px) {
+    #grid-flex li {
+        display: inline-flex;
+        justify-content: space-around;
+        align-content: flex-start;
+        flex: 2;
+        flex-wrap: wrap;
+        width: 17.7%;    
+        }
+    #grid-flex li:nth-child(1) {
+    display: column;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex: 2;
+    flex-wrap: wrap;
+    width: 42.5%;
+    min-height: 610px;
+    margin: 10px;
+    }
+
+}
